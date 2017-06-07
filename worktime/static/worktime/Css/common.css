@@ -1,0 +1,342 @@
+@charset "UTF-8";
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  font-size: 12px;
+  font-family: "fira_sansbook";
+  background: #eff3f7;
+  color: #8c949b;
+  background-image: url(../Pics/mainBG.png); }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+textarea {
+  resize: none; }
+
+.hidden {
+  display: none !important; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+
+  padding: 3px 8px;
+  border-radius: 3px;
+
+  font-size: 16px;
+
+  color: #fff;
+  text-decoration: none;
+
+  background: #ccc;
+
+  box-shadow: 0 0 3px 2px #ccc;
+
+  transition: .3s;
+  opacity: .8;
+
+  border: none;
+}
+
+.btn:hover {
+  box-shadow: 0 0 2px 1px #444;
+  opacity: 1;
+}
+
+.btn:nth-of-type(2) {
+  margin-left: 30px;
+}
+
+.btn--big {
+  padding: 5px 12px;
+  letter-spacing: 1px;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0 #444;
+}
+
+.btn--blue {
+  background-color: #2195F2;
+}
+
+.btn--green {
+  background-color: #4CAE50;
+}
+
+.btn--red {
+  background-color: #D22F2F;
+}
+
+.form {
+  display: block;
+  width: 400px;
+  text-align: right;
+}
+
+.form label {
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+
+  margin-bottom: 30px;
+
+  font-size: 18px;
+  line-height: 24px;
+
+  width: 50%;
+  padding-right: 20px;
+}
+
+.form input,
+.form select {
+  display: inline-block;
+  vertical-align: middle;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  border: 1px solid #ccc;
+  border-radius: 3px;
+
+  padding: 3px 8px;
+
+  text-align: center;
+
+  background-color: #fff;
+
+  transition: .3s;
+
+  outline: none;
+
+  box-sizing: border-box;
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+.form select option {
+  text-align: center;
+}
+
+.form input:focus {
+  border-color: #2195F2;
+}
+
+.form div {
+  text-align: center;
+}
+
+.mainWrapper {
+  display: block;
+  position: relative;
+  min-height: 100%;
+  height: auto !important; }
+  .mainWrapper:after {
+    content: "";
+    display: block;
+    height: 80px; }
+
+/* Описание хэдера */
+.mainHeader {
+  display: block;
+  background: #eff3f7;
+  z-index: 1; }
+  .mainHeader__nav {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto; }
+  .mainHeader__flex {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0; }
+  .mainHeader__nav a {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .mainHeader:after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: -webkit-linear-gradient(left, #eff3f7, #1c6684, #eff3f7);
+    background: -o-linear-gradient(left, #eff3f7, #1c6684, #eff3f7);
+    background: linear-gradient(to right, #eff3f7, #1c6684, #eff3f7); }
+
+.mainLogo {
+  display: inline-block;
+  height: 42px;
+  width: 243px;
+  margin-top: 38px; }
+  .mainLogo__img {
+    width: 100%; }
+  .mainLogo__text {
+    display: none; }
+
+
+/* Описание основного контента */
+.mainContent {
+  display: block;
+  position: relative; }
+  .mainContent__wrapper {
+    display: block;
+    max-width: 1280px;
+    position: relative;
+    margin: 0 auto;
+    padding: 40px 0;
+    border-top: none;
+    border-bottom: none; }
+
+/* Описание новостной ленты */
+.contentBlock {
+  display: block;
+  padding: 20px 15px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 6px 3px #ccc;
+  margin-bottom: 40px;
+  background-color: #eff3f7;
+  border-radius: 5px;
+  overflow: hidden;
+}
+  .contentBlock:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .contentBlock__title {
+    display: block;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .contentBlock__date {
+    display: block;
+    font-size: 12px;
+    color: #ccc;
+    margin-bottom: 20px;
+  }
+
+  .contentBlock__content {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+    .contentBlock__content-text {
+      font-size: 16px;
+      margin: 0;
+      margin-bottom: 25px;
+      padding: 0 10px;
+    }
+
+    .contentBlock__content-wrapper {
+      display: block;
+      width: 500px;
+      max-height: 400px;
+      overflow: hidden;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      margin: 0 auto;
+    }
+
+      .contentBlock__content-img {
+        width: 100%;
+        display: block;
+      }
+
+  .contentBlock__meta {
+    display: block;
+  }
+
+    .contentBlock__meta-link {
+      float: right;
+      font-size: 14px;
+      font-weight: bold;
+      color: #6bbccf;
+      text-decoration: none;
+      font-style: italic;
+    }
+
+  .contentBlock__table {
+    margin: 0 auto;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .contentBlock__table tr {
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .contentBlock__table tr:first-of-type {
+    border-bottom: 2px;
+    text-align: center;
+  }
+
+  .contentBlock__table tr:last-of-type {
+    border-bottom: none;
+  }
+
+  .contentBlock__table tr:nth-of-type(2n) {
+    background-color: #fff;
+  }
+
+  .contentBlock__table td {
+    padding: 5px 15px;
+  }
+
+/* Описание футера */
+.mainFooter {
+  display: block;
+  position: relative;
+  margin-top: -80px;
+  height: 80px;
+  background: #eff3f7; }
+  .mainFooter:before {
+    content: "";
+    display: block;
+    height: 3px;
+    background: -webkit-linear-gradient(left, #eff3f7, #1c6684, #eff3f7);
+    background: -o-linear-gradient(left, #eff3f7, #1c6684, #eff3f7);
+    background: linear-gradient(to right, #eff3f7, #1c6684, #eff3f7); }
+  .mainFooter__wrapper {
+    display: block;
+    position: relative;
+    max-width: 970px;
+    margin: 0 auto;
+    height: 77px; }
+  .mainFooter__lock {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    width: 20px;
+    height: 32px;
+    margin-top: -18px;
+    background-image: url(../Pics/sprite-icons.png);
+    background-repeat: no-repeat;
+    background-position: -41px -5px; }
+    .mainFooter__lock:hover {
+      background-position: -123px -5px; }
+  .mainFooter__copyright {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #606972;
+    font-size: 13px;
+    line-height: 14px;
+    padding-top: 33px; }
+

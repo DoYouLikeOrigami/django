@@ -1,0 +1,57 @@
+{% extends "base.jinja2" %}
+
+{% block title %}{{Title}}{% endblock %}
+
+{% block content %}
+	<article class="contentBlock">
+		<h1 class="contentBlock__title">
+			Водители&nbsp;
+			<a class="btn btn--green btn--big" href="/drivers/create/">Добавить водителя</a>
+		</h1>
+
+
+		<table class="contentBlock__table">
+			<tr>
+				<td>Паспорт</td>
+				<td>Класс</td>
+				<td>Статус</td>
+
+				{% if DriverInfo %}
+					<td>Опыт</td>
+					<td>Зарплата</td>
+				{% endif %}
+
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			{% if Drivers %}
+				{% for i in Drivers %}
+					<tr>
+						<td>{{i.passport}}</td>
+						<td>{{i.driverclass}}</td>
+						<td>{{i.status}}</td>
+						<td><a class="btn btn--blue" href="/drivers/detail/{{i.id}}/">Подробнее</a></td>
+						<td><a class="btn" href="/drivers/update/{{i.id}}/">Изменить</a></td>
+						<td><a class="btn btn--red" href="/drivers/delete/{{i.id}}/">Удалить</a></td>
+					</tr>
+				{% endfor %}
+			{% endif %}
+
+			{% if DriverInfo %}
+				<tr>
+					<td>{{DriverInfo.passport}}</td>
+					<td>{{DriverInfo.driverclass}}</td>
+					<td>{{DriverInfo.status}}</td>
+					<td>{{DriverInfo.experience}}</td>
+					<td>{{DriverInfo.payment}}</td>
+					<td><a class="btn btn--blue" href="/drivers/list/">Назад</a></td>
+					<td><a class="btn" href="/drivers/update/{{DriverInfo.id}}/">Изменить</a></td>
+					<td><a class="btn btn--red" href="/drivers/delete/{{DriverInfo.id}}/">Удалить</a></td>
+				</tr>
+			{% endif %}
+
+		</table>
+	</article>
+{% endblock %}

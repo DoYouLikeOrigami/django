@@ -1,0 +1,18 @@
+{% extends "base.jinja2" %}
+
+{% block title %}{{Title}}{% endblock %}
+
+{% block content %}
+	<article class="contentBlock">
+		<h1 class="contentBlock__title">
+			{{Title}}
+			<a class="btn btn--red btn--big" href="/drivers/list/">Отмена</a>
+		</h1>
+
+		<form class="form" action="/drivers/{{Action}}" method="post">
+			{% csrf_token %}
+			{{ Form }}
+			<button class="btn btn--green btn--big" type="submit">{{ButtonText}} водителя</button>
+		</form>
+	</article>
+{% endblock %}

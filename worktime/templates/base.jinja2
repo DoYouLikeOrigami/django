@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		{% include 'blocks/meta.jinja2' %}
+		<title> 
+			{% block title %}{% endblock %} 
+		</title>
+	</head>
+
+	<body>
+		<div class="mainWrapper">
+			{% include 'blocks/header.jinja2' %}
+
+			<section class="mainContent">
+				<div class="mainContent__wrapper clearfix">
+					{% block content %}{% endblock %}
+				</div>
+			</section>
+		</div>
+
+		{% include 'blocks/footer.jinja2' %}
+	</body>
+</html>
